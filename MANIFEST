@@ -1,0 +1,12 @@
+Build.PL
+Changes
+MANIFEST
+README
+lib/App/ZofCMS/Plugin/DBIPPT.pm
+examples/index2.tmpl
+t/00-load.t
+t/01-plugin.t
+t/pod-coverage.t
+t/pod.t
+Makefile.PL
+META.yml

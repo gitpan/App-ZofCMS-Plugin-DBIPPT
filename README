@@ -1,0 +1,47 @@
+App-ZofCMS-Plugin-DBIPPT
+
+The module is a plugin for L<App::ZofCMS> that provides 
+means to automatically post-process some most common (at least for me)
+post-processing needs when using L<App::ZofCMS::Plugin::DBI>; namely,
+converting numerical output of C<time()> with C<localtime()> as well
+as changing new lines in regular text data into C<br>s while escaping
+HTML Entities.
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Build.PL
+	./Build
+	./Build test
+	./Build install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc App::ZofCMS::Plugin::DBIPPT
+
+You can also look for information at:
+
+    RT, CPAN's request tracker
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=App-ZofCMS-Plugin-DBIPPT
+
+    AnnoCPAN, Annotated CPAN documentation
+        http://annocpan.org/dist/App-ZofCMS-Plugin-DBIPPT
+
+    CPAN Ratings
+        http://cpanratings.perl.org/d/App-ZofCMS-Plugin-DBIPPT
+
+    Search CPAN
+        http://search.cpan.org/dist/App-ZofCMS-Plugin-DBIPPT/
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2009 'Zoffix
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
