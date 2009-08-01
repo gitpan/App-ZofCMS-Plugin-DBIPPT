@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::DBIPPT;
 use warnings;
 use strict;
 
-our $VERSION = '0.0101';
+our $VERSION = '0.0102';
 use base 'App::ZofCMS::Plugin::Base';
 use HTML::Entities;
 
@@ -181,7 +181,22 @@ any other plugins generate data for processing.
         t       => 'time',
     }
 
-B<Mandatory>. Takes a hashref as a value. To run with all the defaults,
+    # derive config via a sub
+    plug_dbippt => sub {
+        my ( $t, $q, $config ) = @_;
+        return {
+            cell    => 't',
+            key     => 'dbi',
+            n       => undef,
+            t       => 'time',
+        };
+    }
+
+B<Mandatory>. Takes a hashref or a subref as a value. If subref is specified,
+its return value will be assigned to C<plug_dbippt> as if it was already there. If sub returns
+an C<undef>, then plugin will stop further processing. The C<@_> of the subref will
+contain (in that order): ZofCMS Tempalate hashref, query parameters hashref and
+L<App::ZofCMS::Config> object. To run with all the defaults,
 use an empty hashref. The keys/values are as follows:
 
 =head3 C<cell>
