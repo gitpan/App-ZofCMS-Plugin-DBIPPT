@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::DBIPPT;
 use warnings;
 use strict;
 
-our $VERSION = '0.0102';
+our $VERSION = '0.0103';
 use base 'App::ZofCMS::Plugin::Base';
 use HTML::Entities;
 
