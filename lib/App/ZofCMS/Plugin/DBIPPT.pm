@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::DBIPPT;
 use warnings;
 use strict;
 
-our $VERSION = '0.0103';
+our $VERSION = '0.0104';
 use base 'App::ZofCMS::Plugin::Base';
 use HTML::Entities;
 
@@ -75,7 +75,8 @@ sub _process_key {
                 s/\r?\n/<br>/g;
             }
             for ( @$_{ @t } ) {
-                $_ = localtime $_;
+                $_ = localtime $_
+                    if defined and length;
             }
         }
         else {
@@ -84,7 +85,8 @@ sub _process_key {
                 s/\r?\n/<br>/g;
             }
             for ( @$_[ @t ] ) {
-                $_ = localtime $_;
+                $_ = localtime $_
+                    if defined and length;
             }
         }
     }
@@ -309,7 +311,8 @@ B<Defaults to:> C<undef>
     }
 
 B<Optional>. Pneumonic: B<t>ime. Keys/indexes specified in
-C<t> argument are expected to point to values of C<time()> output
+C<t> argument are expected to point to either C<undef> or empty string, in which case, no conversion will
+be done, or values of C<time()> output
 and what will be done is C<scalar localtime($v)> (where C<$v>) is 
 the original value) run on them and the return is assigned back to
 the original. In other words, they will be converted from C<time> to 

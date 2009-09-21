@@ -1,6 +1,6 @@
 ---
 name: App-ZofCMS-Plugin-DBIPPT
-version: 0.0103
+version: 0.0104
 author:
   - "'Zoffix <'zoffix@cpan.org'>"
 abstract: simple post-processor for results of DBI plugin queries
@@ -17,7 +17,7 @@ configure_requires:
 provides:
   App::ZofCMS::Plugin::DBIPPT:
     file: lib/App/ZofCMS/Plugin/DBIPPT.pm
-    version: 0.0103
+    version: 0.0104
 generated_by: Module::Build version 0.34
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
