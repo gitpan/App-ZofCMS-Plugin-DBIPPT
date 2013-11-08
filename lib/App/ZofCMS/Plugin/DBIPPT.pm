@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::DBIPPT;
 use warnings;
 use strict;
 
-our $VERSION = '0.0104';
+our $VERSION = '0.0105';
 use base 'App::ZofCMS::Plugin::Base';
 use HTML::Entities;
 
@@ -94,6 +94,8 @@ sub _process_key {
 
 1;
 __END__
+
+=encoding utf8
 
 =head1 NAME
 
