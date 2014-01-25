@@ -1,26 +1,25 @@
 ---
 abstract: 'simple post-processor for results of DBI plugin queries'
 author:
-  - "'Zoffix <'zoffix@cpan.org'>"
+  - 'Zoffix Znet <cpan@zoffix.com>'
 build_requires:
   Test::More: 0
 configure_requires:
-  Module::Build: 0
-dynamic_config: 1
-generated_by: 'Module::Build version 0.4007, CPAN::Meta::Converter version 2.132830'
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 5.012, CPAN::Meta::Converter version 2.132830'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: App-ZofCMS-Plugin-DBIPPT
-provides:
-  App::ZofCMS::Plugin::DBIPPT:
-    file: lib/App/ZofCMS/Plugin/DBIPPT.pm
-    version: 0.0105
 requires:
-  App::ZofCMS::Plugin::Base: 0.0103
-  HTML::Entities: 1.35
-  perl: 5.006
+  App::ZofCMS::Plugin::Base: 0
+  HTML::Entities: 0
+  base: 0
+  strict: 0
+  warnings: 0
 resources:
-  license: http://dev.perl.org/licenses/
-version: 0.0105
+  bugtracker: https://github.com/zoffixznet/App-ZofCMS-Plugin-DBIPPT/issues
+  repository: git://github.com/zoffixznet/App-ZofCMS-Plugin-DBIPPT.git
+version: 1.001001

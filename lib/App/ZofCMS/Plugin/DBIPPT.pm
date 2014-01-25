@@ -3,7 +3,7 @@ package App::ZofCMS::Plugin::DBIPPT;
 use warnings;
 use strict;
 
-our $VERSION = '0.0105';
+our $VERSION = '1.001001';
 use base 'App::ZofCMS::Plugin::Base';
 use HTML::Entities;
 
@@ -70,23 +70,21 @@ sub _process_key {
 
     for ( @$ref ) {
         if ( $is_hash ) {
-            for ( @$_{ @n } ) {
+            for ( grep defined, @$_{ @n } ) {
                 encode_entities $_;
                 s/\r?\n/<br>/g;
             }
-            for ( @$_{ @t } ) {
-                $_ = localtime $_
-                    if defined and length;
+            for ( grep defined, @$_{ @t } ) {
+                $_ = localtime $_;
             }
         }
         else {
-            for ( @$_[ @n ] ) {
+            for ( grep defined, @$_[ @n ] ) {
                 encode_entities $_;
                 s/\r?\n/<br>/g;
             }
-            for ( @$_[ @t ] ) {
-                $_ = localtime $_
-                    if defined and length;
+            for ( grep defined, @$_[ @t ] ) {
+                $_ = localtime $_;
             }
         }
     }

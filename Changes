@@ -1,5 +1,9 @@
 Revision history for App-ZofCMS-Plugin-DBIPPT
 
+1.001001 2014-01-25
+        - Converted to dzil
+        - Fixed RT#90132 (mirriad of undef warnings)
+
 0.0105  2013-11-07
         - Minor fixes to comply with specs and Kwalitee game
 
